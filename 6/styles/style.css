@@ -27,12 +27,6 @@ body {
   margin: 0;
 }
 
-img {
-  max-width: 100%;
-  /* Штука которая делает отступ, а ниже ещё одна */
-  /* object-fit: contain; */
-}
-
  /* Для выравнивания некоторых элементов  */
 .visually-hidden {
   position: absolute;
@@ -64,14 +58,6 @@ img {
   margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
 .navigation {
   display: flex;
   text-align: center;
@@ -88,7 +74,6 @@ img {
   display: flex;
   justify-content: space-between;
   padding-left: 169px;
-  /* Щель от границы сайта появляется тут, но если задать min-with её не будет */
   width: 921px;
 }
 
@@ -142,28 +127,6 @@ img {
   color: #FFFFFF;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main-baner-text {
   background-color: #83B3D3;
   background-image: url("../images/background/index-background.jpg");
@@ -171,17 +134,13 @@ img {
   background-repeat: no-repeat;
   text-align: center;
   margin-bottom: 63px;
+  min-height: 485px;
 }
 
 .main-text {
   display: block;
   margin: 0 auto;
   padding-top: 51px;
-
-}
-.divider {
-  padding-top: 25px;
-  display: block;
 }
 
 .main-title {
@@ -207,6 +166,7 @@ img {
 
 .reason-line {
   display: flex;
+  align-items: center;
 }
 
 .reason-block {
@@ -256,7 +216,7 @@ img {
   padding-top: 20px;
 }
 
-.reason-block-blue .reason-text {
+.reason-line-blue .reason-text {
   width: 220px;
 }
 
@@ -264,7 +224,7 @@ img {
   color: #FFFFFF;
 }
 
-.reason-block-blue {
+.reason-line-blue {
   color: #FFFFFF;
   background-color: #83B3D3;
 }
@@ -355,11 +315,23 @@ img {
 }
 
 .subscribe-form {
+  display: flex;
   width: 800px;
+  min-height: 60px;
   margin: 0 auto;
+
+}
+
+.subscribe-field {
+  padding: 0;
+  border: 0;
+  align-items: stretch;
+  flex-grow: 1;
 }
 
 .subscribe-email-button {
+  width: 200px;
+  align-items: stretch;
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
@@ -377,12 +349,13 @@ img {
 .footer {
   background-color: #FFFFFF;
   color: #000000;
+  padding-bottom: 40px;
 }
 
 .footer-container {
   display: flex;
   align-items: center;
-  margin: 40px auto 40px;
+  margin: 40px auto 0;
 }
 
 .footer-nav-link{
@@ -614,12 +587,12 @@ img {
   display: block;
 }
 
-/* .hotel-price {
+.hotel-price {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   margin-top: 16px;
-} */
+}
 
 .hotel,
 .price {

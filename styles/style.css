@@ -638,7 +638,7 @@ body {
 }
 
 .hotel-card-favorite {
-  max-height: 37px;
+  min-height: 37px;
 }
 
 .button-green {

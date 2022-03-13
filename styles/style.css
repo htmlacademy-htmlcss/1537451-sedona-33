@@ -317,6 +317,28 @@ content: "";
   text-align: center;
 }
 
+.subscribe-field {
+  background: #F2F2F2;
+}
+
+/* .subscribe-field:invalid {
+  border: 2px solid #FF5757
+}
+.subscribe-field:invalid:placeholder-shown {
+  background-color: #F2F2F2;
+} */
+
+
+.subscribe-field:hover {
+  background: #E6E6E6;
+}
+
+.subscribe-field:focus {
+  background: #E6E6E6;
+  border: 3px solid #83B3D3
+}
+
+
 .search-hotel-button {
   display: block;
   margin: 56px auto 0;
@@ -414,6 +436,20 @@ content: "";
   cursor: pointer;
 }
 
+.subscribe-email-button:hover {
+  background: #68A2CA;
+}
+
+.subscribe-button-text:active {
+  background: #68A2CA;
+  opacity: 0.3;
+}
+
+.subscribe-email-button:focus {
+  background: #68A2CA;
+  border: 3px solid #756257
+}
+
 .button-blue {
   color: #FFFFFF;
   background-color: #83B3D3;
@@ -449,6 +485,25 @@ content: "";
   background-position: center;
   /* background-size: 16px 16px; */
   /* outline: 3px solid #7DB54F; */
+}
+
+.social-icon:hover {
+  fill: #68A2CA;
+}
+
+
+.footer-social-link:focus {
+  box-sizing: border-box;
+  border: 3px solid #83B3D3;
+}
+
+.social-icon:focus{
+  fill: #68A2CA;
+}
+
+.social-icon:active {
+  fill: #68A2CA;
+  opacity: 0.3;
 }
 
 /* .twitter-link {
@@ -489,9 +544,42 @@ content: "";
   text-transform: uppercase;
 }
 
+.footer-numberphone-phone:hover{
+  color: #756257;
+}
+
+.footer-numberphone-phone:active{
+  color: #756257;
+  border: 3px solid #83B3D3
+}
+
+.footer-numberphone-phone:focus{
+  color: #756257;
+  opacity: 0.3;
+}
+
 .html-academy-logo {
   width: 115px;
   margin-right: 72px;
+}
+
+.acdemy-logo:hover {
+  fill: #756257;
+}
+
+.acdemy-logo:active {
+  fill: #756257;
+}
+
+.acdemy-logo:focus {
+  fill: #756257;
+  opacity: 0.3;
+}
+
+.html-academy-logo:focus {
+  border: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .catalog-hotel-form {

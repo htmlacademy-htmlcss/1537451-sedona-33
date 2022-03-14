@@ -156,7 +156,6 @@ content: "";
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
-  /* text-align: center; */
   background-color: #756257;
   color: #FFFFFF;
 }
@@ -321,14 +320,6 @@ content: "";
   background: #F2F2F2;
 }
 
-/* .subscribe-field:invalid {
-  border: 2px solid #FF5757
-}
-.subscribe-field:invalid:placeholder-shown {
-  background-color: #F2F2F2;
-} */
-
-
 .subscribe-field:hover {
   background: #E6E6E6;
 }
@@ -337,7 +328,6 @@ content: "";
   background: #E6E6E6;
   border: 3px solid #83B3D3
 }
-
 
 .search-hotel-button {
   display: block;
@@ -419,6 +409,7 @@ content: "";
   border: 0;
   align-items: stretch;
   flex-grow: 1;
+  outline: none;
 }
 
 .subscribe-field-catalog {
@@ -434,6 +425,7 @@ content: "";
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 
 .subscribe-email-button:hover {
@@ -483,21 +475,9 @@ content: "";
   display: block;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: 16px 16px; */
-  /* outline: 3px solid #7DB54F; */
 }
 
 .social-icon:hover {
-  fill: #68A2CA;
-}
-
-
-.footer-social-link:focus {
-  box-sizing: border-box;
-  border: 3px solid #83B3D3;
-}
-
-.social-icon:focus{
   fill: #68A2CA;
 }
 
@@ -506,26 +486,14 @@ content: "";
   opacity: 0.3;
 }
 
-/* .twitter-link {
-  background-image: url('/images/svg/social-twitter.svg');
-  object-fit: contain;
-  height: 18px;
-  width: 15px;
+.social-icon:focus{
+  fill: #68A2CA;
 }
 
-.facebook-link {
-  object-fit: contain;
-  background-image: url('/images/svg/social-facebook.svg');
-  height: 18px;
-  width: 10px;
+.footer-social-link:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
 }
-
-.youtube-link {
-  background-image: url('/images/svg/social-youtube.svg');
-  object-fit: contain;
-  height: 16px;
-  width: 20px;
-} */
 
 .footer a {
   color: inherit;
@@ -550,12 +518,13 @@ content: "";
 
 .footer-numberphone-phone:active{
   color: #756257;
-  border: 3px solid #83B3D3
+  opacity: 0.3;
 }
 
 .footer-numberphone-phone:focus{
   color: #756257;
-  opacity: 0.3;
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
 }
 
 .html-academy-logo {
@@ -563,22 +532,21 @@ content: "";
   margin-right: 72px;
 }
 
-.acdemy-logo:hover {
+.academy-logo:hover {
   fill: #756257;
 }
 
-.acdemy-logo:active {
-  fill: #756257;
-}
-
-.acdemy-logo:focus {
+.academy-logo:active {
   fill: #756257;
   opacity: 0.3;
 }
 
+.academy-logo:focus {
+  fill: #756257;
+}
+
 .html-academy-logo:focus {
-  border: 3px solid #83B3D3;
-  box-sizing: border-box;
+  outline: 3px solid #83B3D3;
   border-radius: 10px;
 }
 
@@ -748,8 +716,6 @@ content: "";
 .show-links {
   display: block;
   padding: 17px 16px;
-  /* min-width: 48px; */
-  /* min-height: 48px; */
   outline: 3px solid #a5702c;
 }
 
@@ -793,13 +759,11 @@ content: "";
   max-width: 398px;
   padding: 20px;
   margin-bottom: 10px;
-  /* margin-top: 53px; */
 }
 
 .hotel-card:not(:nth-child(3)) {
   margin-right: 18px;
 }
-
 
 .hotel-price {
   display: grid;
@@ -814,7 +778,6 @@ content: "";
 .hotel-card-link-text {
   grid-column: 1 / -1;
 }
-
 
 .hotel-card-image {
   display: block;
@@ -873,10 +836,7 @@ content: "";
 }
 
 .hotel-card-rating {
-  /* display: block; */
-  /* min-height: 37px; */
   width: 160px;
-  /* padding-top: 9px; */
   color: #333333;
   background-color: #F2F2F2;
   font-size: 16px;

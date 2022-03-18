@@ -155,6 +155,38 @@
         </a>
       </div>
     </footer>
+    <div class="modal-container ">
+      <div class="modal modal-search">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z" fill="#000"/></svg>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="modal-line-date">
+              <h3 class="date-enter-title form-title reset">Дата заезда:</h3>
+              <input class="date-enter-form date-form" type="date" value="date-start">
+            </div>
+            <p class="date-enter-text date-text">Мы не можем отправить вас в прошлое.</p>
+            <div class="modal-line-date">
+              <h3 class="date-exit-title form-title reset">Дата выезда:</h3>
+              <input class="date-exit-form date-form" type="date" value="date-end">
+            </div>
+            <p class="date-exit-text date-text">На эти даты есть свободные номера. Пока есть.</p>
+            <div class="modal-line">
+              <h3 class="adults-title form-title reset">Взрослые:</h3>
+              <input class="adults-form number-form" type="number" value="adults-number">
+              <h3 class="children-title form-title reset">Дети:</h3>
+              <input class="children-form number-form" type="number" value="children-number">
+            </div>
+            <button class="modal-enter-button"  type="submit" value="apply">
+              <span>Найти</span>
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
     </div>
   </body>
 </html>

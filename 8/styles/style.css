@@ -27,7 +27,6 @@ body {
   margin: 0;
 }
 
- /* Для выравнивания некоторых элементов  */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -631,7 +630,7 @@ body {
 
 .catalog-title {
   width: 528px;
-  max-height: 68px;
+  min-height: 68px;
   font-weight: bold;
   font-size: 60px;
   line-height: 78px;
@@ -1064,7 +1063,7 @@ body {
 
 .hotel-card {
   width: 300px;
-  max-height: 398px;
+  min-height: 398px;
   padding: 20px;
   margin-bottom: 10px;
 }
@@ -1128,7 +1127,7 @@ body {
   line-height: 21px;
   padding: 9px 0 7px;
   color: #FFFFFF;
-  max-height: 37px;
+  min-height: 37px;
   border-radius: 4px;
 }
 
@@ -1155,9 +1154,6 @@ body {
   padding: 0;
   width: 90px;
   height: 18px;
-  background-image: url("../images/svg/star-1.svg");
-  object-fit: contain;
-  background-repeat: round;
 }
 
 .hotel-card-rating {
@@ -1173,6 +1169,7 @@ body {
   color: #333333;
   background-color: #F2F2F2;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .hotel-card-link:hover {
@@ -1243,7 +1240,7 @@ body {
 
 .download-more-container {
   max-width: 1056px;
-  margin: 30px auto;
+  margin: 24px auto 28px auto;
   border-top: 1px solid #E6E6E6;
   border-bottom: 1px solid #E6E6E6;
 }
@@ -1298,7 +1295,7 @@ body {
   display: block;
   box-sizing: border-box;
   width: 55px;
-  height: 55px;
+  min-height: 55px;
   padding-top: 13px;
   color: #FFFFFF;
   text-decoration: none;
@@ -1429,7 +1426,7 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 54px;
+  top: 58px;
   right: 70px;
   width: 53px;
   height: 53px;
@@ -1491,7 +1488,7 @@ body {
   border: none;
   background-image: url("../images/svg/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 17px center;
+  background-position: right 18px center;
 }
 
 .date-form:hover {
@@ -1550,24 +1547,85 @@ body {
   margin: 0 43px 0 56px;
 }
 
-.number-form {
-  width: 130px;
-  height: 50px;
+.people-clicker {
+  display: flex;
+  width: 133px;
+  border-radius: 4px;
+}
+
+.modal-button {
+  width: 38px;
   padding: 0;
+  border: none;
+  outline: none ;
+  background: #F2F2F2;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.minus {
+  border-radius: 4px 0px 0px 4px;
+  padding-left: 13px;
+  padding-top: 2px;
+}
+
+.plus {
+  border-radius: 0px 4px 4px 0px;
+  padding-top: 4px;
+  padding-right: 15px;
+}
+
+.minus-form {
+  padding: 9px 3px;
+}
+
+.minus:hover path{
+  opacity: 1;
+}
+
+.minus:focus .minus-form {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.minus:focus path{
+  opacity: 1;
+}
+
+.plus-form {
+  padding: 3px;
+}
+
+.plus:hover path{
+  opacity: 1;
+}
+
+.plus:focus .plus-form {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.plus:focus path{
+  opacity: 1;
+}
+
+.number-form {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
   color: #000000;
-  cursor: pointer;
   background-color: #F2F2F2;
-  border-radius: 4px;
+  cursor: pointer;
   text-align: center;
   border: none;
-  background-image: url("../images/svg/plus.svg");
-  background-repeat: no-repeat;
-  background-position: right 19px center;
+  padding: 0;
+  width: 58px;
+}
+
+.number-form:focus-visible {
+  outline: none;
 }
 
 .number-form::-webkit-outer-spin-button,
@@ -1608,4 +1666,72 @@ body {
 
 .modal-container-close {
   display: none;
+}
+
+.tooltip-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.circle-info {
+  position: absolute;
+  top: 359px;
+  right: 222px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: none;
+  background-color: #83B3D3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.logo-info {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  box-sizing: border-box;
+
+  padding: 20px 18px 22px 22px;
+  border-radius: 10px;
+  width: 256px;
+  position: absolute;
+  top: 399px;
+  left: 352px;
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.tooltip-button:hover .circle-info {
+  background-color: #68A2CA;
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+  content:'';
+  background-image: url("../images/svg/arrow-info.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -175,7 +175,7 @@
         </a>
       </div>
     </footer>
-    <div class="modal-container ">
+    <div class="modal-container">
       <!-- modal-container-close для скрытия модального окна-->
       <div class="modal modal-search">
         <button class="modal-close-button">
@@ -188,33 +188,33 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
             <div class="modal-line-date">
-              <h3 class="date-enter-title form-title reset">Дата заезда:</h3>
-              <input class="date-enter-form date-form" type="date" value="2020-04-27" name="date-start">
+              <label class="form-title reset" for="start">Дата заезда:</label>
+              <input class="date-enter-form date-form" type="date" value="2020-04-27" id="start" name="date-start">
             </div>
             <p class="date-enter-text date-text">Мы не можем отправить вас в прошлое.</p>
             <div class="modal-line-date">
-              <h3 class="date-exit-title form-title reset">Дата выезда:</h3>
-              <input class="date-exit-form date-form" type="date" value="2022-09-01" name="date-end">
+              <label class="form-title reset" for="end">Дата выезда:</label>
+              <input class="date-exit-form date-form" type="date" value="2022-09-01" id="end" name="date-end">
             </div>
             <p class="date-exit-text date-text">На эти даты есть свободные номера. Пока есть.</p>
             <div class="modal-line">
-              <h3 class="adults-title form-title reset">Взрослые:</h3>
+              <label class="adults-title form-title reset" for="adults">Взрослые:</label>
               <div class="people-clicker">
                 <button class="minus modal-button">
                   <svg class="minus-form" width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity=".3" d="M0 0v1h13V0H0Z" fill="#000" />
                   </svg>
                 </button>
-                <input class="adults-form number-form" type="number" value="adults-number" name="adults">
+                <input class="adults-form number-form" type="number" value="2" id="adults" name="adults">
                 <button class="plus modal-button">
                   <svg class="plus-form" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity=".3" d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />
                   </svg>
                 </button>
               </div>
-              <h3 class="children-title form-title reset">Дети:</h3>
+              <label class="children-title form-title reset" for="children">Дети:</label>
               <button class="tooltip-button">
-                <div class="circle-info">
+                <span class="circle-info">
                   <svg class="logo-info" width="1" height="9" viewBox="0 0 1 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#a)" fill="#fff">
                       <path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z" />
@@ -225,7 +225,7 @@
                       </clipPath>
                     </defs>
                   </svg>
-                </div>
+                </span>
               </button>
               <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               <div class="people-clicker">
@@ -234,7 +234,7 @@
                     <path opacity=".3" d="M0 0v1h13V0H0Z" fill="#000" />
                   </svg>
                 </button>
-                <input class="children-form number-form" type="number" value="children-number" name="children">
+                <input class="children-form number-form" type="number" value="1" id="children" name="children">
                 <button class="plus modal-button">
                   <svg class="plus-form" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity=".3" d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" />

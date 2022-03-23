@@ -94,7 +94,7 @@ body {
 
 .navigation-link {
   display: block;
-  padding: 20px 17px;
+  padding: 20px 17px 19px;
   font-size: 20px;
   line-height: 26px;
 }
@@ -109,7 +109,7 @@ body {
 
 .navigation-item-current::before {
   position: absolute;
-  top: 65px;
+  top: 64px;
   left: 17px;
   width: 68px;
   height: 2px;
@@ -121,7 +121,7 @@ body {
   position: absolute;
   width: 93px;
   height: 2px;
-  top: 65px;
+  top: 64px;
   left: 235px;
   background-color: #756257;
   content: "";
@@ -135,7 +135,7 @@ body {
 .navigation-user-link {
   position: relative;
   display: block;
-  padding: 8px 12px 0;
+  padding: 8px 11px 0;
 }
 
 .navigation-user-link:hover .navigation-ikon {
@@ -248,7 +248,7 @@ body {
   background-image: url("../images/svg/icon-home.svg");
   background-repeat: no-repeat;
   background-position-x:center;
-  background-position-y: 89px;
+  background-position-y: 88px;
 }
 
 .reason-block-eat {
@@ -266,7 +266,7 @@ body {
 }
 
 .reason-line-two .reason-block {
-  padding-top: 184px;
+  padding-top: 185px;
 }
 
 .reason-image {
@@ -294,7 +294,7 @@ body {
 .reason-text {
   width: 250px;
   margin: 0 auto;
-  padding-top: 30px;
+  padding-top: 29px;
   color: #333333;
   font-size: 18px;
   line-height: 21px;
@@ -302,7 +302,7 @@ body {
 }
 
 .reason-line-two p {
-  padding-top: 20px;
+  padding-top: 18px;
 }
 
 .reason-line-blue .reason-text {
@@ -343,7 +343,7 @@ body {
   text-align: center;
 }
 
-.seatch-hotel-text {
+.search-hotel-text {
   width: 720px;
   margin: 29px auto 0;
   color: #333333;
@@ -354,7 +354,7 @@ body {
 
 .search-hotel-button {
   display: block;
-  margin: 56px auto 0;
+  margin: 55px auto 0;
   width: 575px;
   min-height: 60px;
   font-weight: bold;
@@ -454,12 +454,14 @@ body {
   opacity: 0.6;
 }
 
-.subscribe-field-catalog {
+.subscribe-field {
   background-color: #f2f2f2;
 }
 
-.subscribe-field {
-  background-color: #f2f2f2;
+
+.field:focus:invalid,
+.field.error:focus {
+  outline: 2px solid #FF5757;
 }
 
 .subscribe-field:hover {
@@ -520,26 +522,32 @@ body {
   align-items: center;
 }
 
-.footer-nav-link{
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
-  width: 107px;
-  margin-left: 72px;
+.footer-social {
+  margin-left: 71px;
+  padding-bottom: 10px;
 }
 
-.footer-social-item {
+.footer-nav-link {
+  display: flex;
+  flex-wrap: wrap;
+  width: 108px;
+  justify-content: space-between;
+}
+
+.footer-nav-link li {
   display: block;
-  text-align: center;
+  box-sizing: border-box;
 }
 
 .footer-social-link {
   display: block;
   width: 20px;
   height: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.facebook-link {
+  padding: 1px 5px;
+  box-sizing: border-box;
 }
 
 .social-icon:hover {
@@ -556,7 +564,7 @@ body {
 }
 
 .footer-social-link:focus {
-  outline-offset: 10px;
+  outline-offset: 8px;
   outline: 3px solid #83b3d3;
   border-radius: 1px;
 }
@@ -572,12 +580,14 @@ body {
   text-align: center;
 }
 .footer-numberphone-phone {
-  display: block;
+  /* display: block; */
   width: 361px;
-  margin: 0 auto;
+
+
+  margin-left: 8px;
   font-style: normal;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 37px;
   text-transform: uppercase;
 }
 
@@ -643,17 +653,16 @@ body {
 .catalog-title {
   width: 528px;
   min-height: 68px;
-  padding-top: 35px;
+  padding-top: 39px;
   font-weight: bold;
   font-size: 60px;
-  line-height: 78px;
+  line-height: 70px;
 }
 
 .breadcrumbs {
   display: flex;
   justify-content: space-between;
   width: 111px;
-  margin-top: 3px;
   line-height: 21px;
 }
 
@@ -676,7 +685,7 @@ body {
 
 .catalog-form {
   display: flex;
-  margin-top: 45px;
+  margin-top: 43px;
 }
 
 .catalog-filter-group {
@@ -705,7 +714,7 @@ body {
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 30px;
+  margin-top: 29px;
   background-color: #ffffff;
 }
 
@@ -868,8 +877,8 @@ body {
   content: "";
 }
 
-.control {
-  display: block;
+.control-input:disabled + .control-mark {
+  opacity: 0.3;
 }
 
 .catalog-filter-title {
@@ -973,7 +982,8 @@ body {
 .sorting-list {
   width: 287px;
   min-height: 48px;
-  padding-left: 19px;
+  padding-left: 17px;
+  padding-bottom: 3px;
   margin-left: auto;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
@@ -1023,12 +1033,20 @@ body {
 }
 
 .show-kard-selected {
-  outline: 2px solid #000000;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.show-kard-not-selected {
+  border: 2px solid #e6e6e6;
+  box-sizing: border-box;
   border-radius: 4px;
 }
 
 .show-kard-not-selected:hover {
-  outline: 2px solid #83B3D3;
+  border: 2px solid #83B3D3;
+  box-sizing: border-box;
   border-radius: 4px;
 }
 
@@ -1039,7 +1057,7 @@ body {
 
 .show-links {
   display: block;
-  padding: 17px 16px;
+  padding: 15px 14px;
 }
 
 .show-kard-block {
@@ -1081,7 +1099,7 @@ body {
   width: 300px;
   min-height: 398px;
   padding: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .hotel-card:not(:nth-child(3)) {
@@ -1140,6 +1158,7 @@ body {
   display: block;
   min-height: 37px;
   padding: 9px 0 7px;
+  box-sizing: border-box;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -1169,6 +1188,7 @@ body {
   width: 90px;
   height: 18px;
   padding: 0;
+  padding-top: 14px;
   margin: 0;
 }
 
@@ -1179,6 +1199,7 @@ body {
   padding: 0;
   margin-left: auto;
   margin-right: 0;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 38px;
   text-align: center;
@@ -1258,7 +1279,7 @@ body {
 
 .download-more-container {
   max-width: 1056px;
-  margin: 24px auto 28px auto;
+  margin: 23px auto 29px auto;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1519,7 +1540,7 @@ body {
   background-color: #e6e6e6;
   background-image: url("../images/svg/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 17px center;
+  background-position: right 18px center;
 }
 
 .date-form:active {
@@ -1528,7 +1549,7 @@ body {
   border-radius: 4px;
   background-image: url("../images/svg/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 17px center;
+  background-position: right 18px center;
 }
 
 .date-form:focus {
@@ -1758,4 +1779,10 @@ body {
   margin-right: auto;
   content:"";
   background-image: url("../images/svg/arrow-info.svg");
+}
+
+.field:disabled,
+.field:disabled:hover {
+  background-color: #e6e6e6;
+  opacity: 0.3;
 }
